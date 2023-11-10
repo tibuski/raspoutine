@@ -3,11 +3,12 @@
 # Launch remote install commands
 ssh $1 < ./remoteInstall.sh
 
-# Copy files
-scp ./startSurf.sh $1:~
+# Copy xinitrc
+scp ./xinitrc $1:~
+ssh -t $1 sudo mv ~/xinitrc /etc/X11/xinit
 
-# Insert autostart script in /etc/rc.local
-ssh -t $1 "sudo sed -i '$ i\sudo xinit /home/tibus/startSurf.sh &' /etc/rc.local"
+# Enable or disable screen blanking.
+ssh -t $1 sudo raspi-config nonint do_blanking 1
 
 # Reboot system
 ssh -t $1 "sudo reboot now"

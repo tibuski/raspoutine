@@ -2,15 +2,14 @@
 sudo apt-get update
 sudo apt-get full-upgrade -y
 
-# xserver and matchbox wm
+# xserver
 sudo apt-get --no-install-recommends install xserver-xorg xserver-xorg-video-fbdev xinit x11-xserver-utils pciutils xinput xfonts-100dpi xfonts-75dpi xfonts-scalable -y
-sudo apt-get install matchbox -y
 
 # Unclutter to remove mouse pointer
 sudo apt-get install unclutter -y
 
 # Browser
-sudo apt-get install surf -y
+sudo apt-get install chromium-browser -y
 
 # Remove Screensaver
 sudo apt-get purge xscreensaver -y
