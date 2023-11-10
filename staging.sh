@@ -1,7 +1,13 @@
 #!/bin/bash
 
 # Launch remote install commands
-ssh $1 < ./remoteinstall.sh
+ssh $1 < ./remoteInstall.sh
 
 # Copy files
-scp ./startMidori.sh $1
+scp ./startSurf.sh $1:~
+
+# Insert autostart script in /etc/rc.local
+sed '$ i\sudo /home/tibus/startSurf.sh &' /etc/rc.local 
+
+# Reboot system
+ssh -t $1 "sudo reboot now"
