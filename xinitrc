@@ -1,18 +1,21 @@
 #!/bin/sh
 
 # /etc/X11/xinit/xinitrc
-#
 # global xinitrc file, used by all X sessions started by xinit (startx)
 
-# invoke global X session script
-. /etc/X11/Xsession
+# Matchbox WM
+matchbox-window-manager -use_titlebar no &
 
-# Disable any form of screen saver / screen blanking / power management
-xset s off
-xset s noblank
-xset -dpms
+# Hide mouse cursor
+unclutter -idle 0 &
 
 # Start Chromium in kiosk mode
-exec sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' ~/.config/chromium/'Local State'
-exec sed -i 's/"exited_cleanly":false/"exited_cleanly":true/; s/"exit_type":"[^"]\+"/"exit_type":"Normal"/' ~/.config/chromium/Default/Preferences
-exec chromium-browser --no-sandbox --disable-infobars --kiosk 'https://centricity.telinduscloud.lu/grafana/d/OTShOOtMz/proximus?orgId=1'
+exec chromium https://centricity.telinduscloud.lu/grafana/d/OTShOOtMz/proximus?orgId=1\
+ --disable-gpu-driver-bug-workarounds \
+ --no-sandbox \
+ --kiosk \
+ --noerrdialogs \
+ --disable-infobars \
+ --no-first-run \
+ --start-fullscreen
+

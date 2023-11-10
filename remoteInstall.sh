@@ -9,10 +9,7 @@ sudo apt-get --no-install-recommends install xserver-xorg xserver-xorg-video-fbd
 sudo apt-get install unclutter -y
 
 # Browser
-sudo apt-get install chromium-browser -y
-
-# Remove Screensaver
-sudo apt-get purge xscreensaver -y
+sudo apt-get install chromium -y
 
 # Remove unused dependencies
 sudo apt-get autoremove -y
