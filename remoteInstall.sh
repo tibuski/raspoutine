@@ -5,6 +5,9 @@ sudo apt-get full-upgrade -y
 # xserver
 sudo apt-get --no-install-recommends install xserver-xorg xserver-xorg-video-fbdev xinit x11-xserver-utils pciutils xinput xfonts-100dpi xfonts-75dpi xfonts-scalable -y
 
+# Matchbox Windows Manager
+sudo apt-get install matchbox -y
+
 # Unclutter to remove mouse pointer
 sudo apt-get install unclutter -y
 
