@@ -10,7 +10,7 @@ matchbox-window-manager -use_titlebar no &
 unclutter -idle 0 &
 
 # Start Chromium in kiosk mode
-exec chromium https://centricity.telinduscloud.lu/grafana/d/OTShOOtMz/proximus?orgId=1\
+exec chromium https://centricity.telinduscloud.lu/grafana/playlists/play/b0416d85-018e-443c-9017-8475bd3997bf \
  --disable-gpu-driver-bug-workarounds \
  --no-sandbox \
  --kiosk \
