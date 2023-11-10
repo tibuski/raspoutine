@@ -1,4 +1,0 @@
-@lxpanel --profile LXDE-pi
-@pcmanfm --desktop --profile LXDE-pi
-@firefox --kiosk --private-window https://centricity.telinduscloud.lu/grafana/d/OTShOOtMz/proximus?orgId=1
-@unclutter
