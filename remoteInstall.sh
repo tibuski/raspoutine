@@ -11,10 +11,9 @@ sudo apt-get install unclutter -y
 # Browser
 sudo apt-get install chromium -y
 
-# Remove unused dependencies
-sudo apt-get autoremove -y
-sudo apt-get clean -y
-
 # Remove swap
 sudo apt-get purge dphys-swapfile -y
 
+# Remove unused dependencies
+sudo apt-get autoremove -y
+sudo apt-get clean -y
