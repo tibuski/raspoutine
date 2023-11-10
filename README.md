@@ -9,6 +9,6 @@ Raspberry Headless Kiosk
 ## Staging
 
 * Install your public key in the raspberry's authorized_keys with `ssh-copy-id`
-* Modify the URL in `startSurf.sh`
+* Modify the URL in `xinitrc`
 * Run : `./staging.sh [RASPBERRY IP]`
-* Raspberry should reboot and open Chromium in Kiosk mode on the url from `startSurf.sh`
+* Raspberry should reboot and open Chromium in Kiosk mode on the url from `xinitrc`
