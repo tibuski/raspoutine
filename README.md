@@ -17,3 +17,7 @@ Raspberry Headless Kiosk
 * Modify the Web page URL you want to display in `xinitrc`
 * Run : `./staging.sh [USER]@[RASPBERRY IP]`
 * Raspberry should reboot and open Chromium in Kiosk mode on the url from `xinitrc`
+
+## To Do
+* Test with Grafana official kiosk project (also based on Chromium) :  
+   https://github.com/grafana/grafana-kiosk
