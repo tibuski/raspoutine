@@ -10,12 +10,23 @@ matchbox-window-manager -use_titlebar no &
 unclutter -idle 0 &
 
 # Start Chromium in kiosk mode
-exec chromium https://centricity.telinduscloud.lu/grafana/playlists/play/b0416d85-018e-443c-9017-8475bd3997bf \
+exec chromium -incognito https://centricity.telinduscloud.lu/grafana/playlists/play/b0416d85-018e-443c-9017-8475bd3997bf \
  --disable-gpu-driver-bug-workarounds \
  --no-sandbox \
  --kiosk \
  --noerrdialogs \
  --disable-infobars \
  --no-first-run \
- --start-fullscreen
-
+ --start-fullscreen \
+ --no-crash-upload \
+ --disable-breakpad \
+ --disable-crash-reporter \
+ --incognito \
+ --disable-translate \
+ --fast \
+ --fast-start \
+ --disable-features=TranslateUI \
+ --disk-cache-dir=/dev/null \
+ --disk-cache-size=1 \
+ --password-store=basic \
+ --window-position=0,0
